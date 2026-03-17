@@ -1,0 +1,77 @@
+cff-version: 1.2.0
+title: "Mechanized Foundations of Structural Governance"
+message: "If you use this Coq development, please cite the associated papers."
+type: software
+authors:
+  - family-names: McCann
+    given-names: Alan Lawrence
+    email: research@mashin.live
+    affiliation: "Mashin, Inc."
+repository-code: "https://github.com/mashin-live/governance-proofs"
+license: MIT
+keywords:
+  - formal verification
+  - Coq
+  - interaction trees
+  - AI governance
+  - structural governance
+  - coinduction
+  - governed metaprogramming
+  - homoiconicity
+
+references:
+  - type: article
+    title: "The Two Boundaries: Why Behavioral AI Governance Fails Structurally"
+    authors:
+      - family-names: McCann
+        given-names: Alan Lawrence
+    year: 2026
+    notes: "arXiv preprint (to appear)"
+
+  - type: article
+    title: "Mechanized Foundations of Structural Governance: Machine-Checked Proofs for Governed Intelligence"
+    authors:
+      - family-names: McCann
+        given-names: Alan Lawrence
+    year: 2026
+    notes: "arXiv preprint (to appear)"
+
+  - type: article
+    title: "Effect-Transparent Governance for AI Workflow Architectures: Semantic Preservation, Expressive Minimality, and Decidability Boundaries"
+    authors:
+      - family-names: McCann
+        given-names: Alan Lawrence
+    year: 2026
+    notes: "arXiv preprint (to appear)"
+
+  - type: article
+    title: "Algebraic Semantics of Governed Execution: Monoidal Categories, Effect Algebras, and Coterminous Boundaries"
+    authors:
+      - family-names: McCann
+        given-names: Alan Lawrence
+    year: 2026
+    notes: "arXiv preprint (to appear)"
+
+  - type: article
+    title: "Certified Purity for Cognitive Workflow Executors: From Static Analysis to Cryptographic Attestation"
+    authors:
+      - family-names: McCann
+        given-names: Alan Lawrence
+    year: 2026
+    notes: "arXiv preprint (to appear)"
+
+  - type: article
+    title: "Cryptographic Registry Provenance: Structural Defense Against Dependency Confusion in AI Package Ecosystems"
+    authors:
+      - family-names: McCann
+        given-names: Alan Lawrence
+    year: 2026
+    notes: "arXiv preprint (to appear)"
+
+  - type: article
+    title: "Governed Metaprogramming for Intelligent Systems: Reclassifying Eval as a Governed Effect"
+    authors:
+      - family-names: McCann
+        given-names: Alan Lawrence
+    year: 2026
+    notes: "arXiv preprint (to appear)"

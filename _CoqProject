@@ -1,0 +1,33 @@
+-Q theories MashinGov
+-arg -w -arg -notation-overridden
+
+theories/Prelude.v
+theories/Directives.v
+theories/Governance.v
+theories/Interpreter.v
+theories/Functor.v
+theories/Safety.v
+theories/Convergence.v
+theories/Category.v
+theories/Completeness.v
+theories/TrustSpec.v
+theories/HashChainSpec.v
+theories/InterpreterSpec.v
+theories/Subsumption.v
+theories/CognitiveArchitecture.v
+theories/Oracle.v
+theories/GoalDirected.v
+theories/Rice.v
+theories/GovernedCognitiveCompleteness.v
+theories/Transparency.v
+theories/ExpressiveMinimality.v
+theories/GovernanceAlgebra.v
+theories/MonoidalCategory.v
+theories/EffectAlgebra.v
+theories/EffectHandlers.v
+theories/CapabilityComposition.v
+theories/TraceSemantics.v
+theories/LedgerConnection.v
+theories/CoterminousBoundary.v
+theories/GovernedMetaprogramming.v
+theories/Extraction.v

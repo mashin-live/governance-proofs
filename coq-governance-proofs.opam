@@ -1,0 +1,33 @@
+opam-version: "2.0"
+name: "coq-governance-proofs"
+version: "1.0.0"
+synopsis: "Mechanized foundations of structural governance for cognitive workflow systems"
+description: """
+Coq formalization of structural governance for cognitive workflow systems:
+coinductive safety, governance invariance, expressive completeness,
+governed cognitive completeness, algebraic semantics with symmetric monoidal
+category, capability-indexed composition, and coterminous boundary proofs.
+Includes a verified interpreter specification tested against a production
+BEAM runtime.
+
+345 theorems, 29 modules, approximately 9,942 lines, zero admitted lemmas.
+"""
+maintainer: "Alan McCann <research@mashin.live>"
+authors: ["Alan Lawrence McCann"]
+license: "MIT"
+homepage: "https://github.com/mashin-live/governance-proofs"
+bug-reports: "https://github.com/mashin-live/governance-proofs/issues"
+dev-repo: "git+https://github.com/mashin-live/governance-proofs.git"
+
+depends: [
+  "coq" {>= "8.19" & < "8.21"}
+  "coq-itree" {>= "5.2.0"}
+  "coq-paco" {>= "4.2.0"}
+  "coq-ext-lib" {>= "0.13.0"}
+]
+
+build: [
+  [make "-j%{jobs}%"]
+]
+
+install: []

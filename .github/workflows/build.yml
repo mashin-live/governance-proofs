@@ -1,0 +1,40 @@
+name: Build Coq Proofs
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        coq_version: ['8.19']
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: coq-community/docker-coq-action@v1
+        with:
+          coq_version: ${{ matrix.coq_version }}
+          custom_script: |
+            startGroup "Fix workspace permissions"
+              sudo chown -R coq:coq .
+            endGroup
+            startGroup "Install dependencies"
+              opam repo add coq-released https://coq.inria.fr/opam/released
+              opam install -y coq-itree coq-paco coq-ext-lib
+            endGroup
+            startGroup "Build proofs"
+              make -j2
+            endGroup
+
+      - name: Verify no admitted lemmas
+        if: success()
+        run: |
+          if grep -r "Admitted\." theories/*.v; then
+            echo "ERROR: Found admitted lemmas"
+            exit 1
+          fi
