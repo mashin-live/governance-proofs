@@ -10,7 +10,7 @@ category, capability-indexed composition, and coterminous boundary proofs.
 Includes a verified interpreter specification tested against a production
 BEAM runtime.
 
-345 theorems, 29 modules, approximately 9,942 lines, zero admitted lemmas.
+548 theorems, 32 modules, approximately 12,000 lines, zero admitted lemmas.
 """
 maintainer: "Alan McCann <research@mashin.live>"
 authors: ["Alan Lawrence McCann"]

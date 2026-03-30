@@ -10,7 +10,6 @@ Coq formalization of the core theorems from:
 - McCann, A.L. "Algebraic Semantics of Governed Execution: Monoidal Categories, Effect Algebras, and Coterminous Boundaries." arXiv preprint, 2026.
 - McCann, A.L. "Certified Purity for Cognitive Workflow Executors." arXiv preprint, 2026.
 - McCann, A.L. "Cryptographic Registry Provenance: Structural Defense Against Dependency Confusion in AI Package Ecosystems." arXiv preprint, 2026.
-- McCann, A.L. "Governed Metaprogramming for Intelligent Systems: Reclassifying Eval as a Governed Effect." arXiv preprint, 2026.
 
 Uses the Interaction Trees library to model programs as coinductive trees of
 events, the governance pipeline as a handler transformer, and the four
@@ -18,11 +17,10 @@ primitives as specific event patterns.
 
 ## Summary
 
-- **30 modules**, approximately 10,100 lines of Coq, **349 theorems**
+- **32 modules**, approximately 12,000 lines of Coq, **548 theorems**
 - **Zero admitted lemmas** (every theorem fully proved)
 - **Coq 8.19.2** with Interaction Trees 5.2.1, paco 4.2.3, ExtLib 0.13.0
 - Capstone: **Governed Cognitive Completeness** theorem combining six properties in one result
-- **Governed Metaprogramming** theorems: form purity, materialization governance, no-bypass, boundary preservation
 
 ## What Is Proved
 
@@ -77,15 +75,6 @@ The interpreter specification was tested with property-based testing: 70,000+ ra
 | Decidability boundary | `Rice.v` | Structural properties (capability checks) are decidable; semantic properties (halting) are non-trivial |
 | Halting non-triviality | `Rice.v` | Some programs halt, some don't; halting is not constant-true or constant-false |
 | **Governed Cognitive Completeness** | `GovernedCognitiveCompleteness.v` | **A single architecture simultaneously achieves Turing completeness, oracle integration, decidability self-awareness, goal reachability, cognitive architecture completeness, and subsumption of content governance. All governed.** |
-
-### Governed Metaprogramming
-
-| Theorem | File | What It Says |
-|---------|------|-------------|
-| Form manipulation purity | `GovernedMetaprogramming.v` | Form operations (pure functions on values) produce gov_safe interaction trees. Forms are Ret v: no directive events. |
-| Materialization governed | `GovernedMetaprogramming.v` | Materialization (form to machine) emits a DirectiveE event governed by Gov h. The transition from data to executable authority is a governed effect. |
-| No bypass form-to-machine | `GovernedMetaprogramming.v` | No sequence of pure form operations can produce machine execution. Pure ops compose to Ret (no events); execution requires a governed directive. |
-| **Coterminous boundary preserved** | `GovernedMetaprogramming.v` | **Adding form operations and governed materialization preserves E = G. No new event types introduced; forms use existing DirectiveE. The expressiveness and governance boundaries remain coterminous under governed metaprogramming.** |
 
 ## Setup
 
@@ -156,6 +145,7 @@ theories/
   TraceSemantics.v                -- Execution traces, trace_of relation, trace_of_bind
   LedgerConnection.v              -- Traces to hash chains, tamper evidence, ledger completeness
   CoterminousBoundary.v           -- Expressiveness = governance boundary, algebraic capstone
+  TemporalPolicyEvolution.v       -- Policy changes governed, safety preservation, rollback
   Extraction.v                    -- Coq-to-OCaml extraction directives
 ```
 
