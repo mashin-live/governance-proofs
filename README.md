@@ -10,6 +10,7 @@ Coq formalization of the core theorems from:
 - McCann, A.L. "Algebraic Semantics of Governed Execution: Monoidal Categories, Effect Algebras, and Coterminous Boundaries." arXiv preprint, 2026.
 - McCann, A.L. "Certified Purity for Cognitive Workflow Executors." arXiv preprint, 2026.
 - McCann, A.L. "Cryptographic Registry Provenance: Structural Defense Against Dependency Confusion in AI Package Ecosystems." arXiv preprint, 2026.
+- McCann, A.L. "Governed Metaprogramming for Intelligent Systems: Reclassifying Eval as a Governed Effect." arXiv preprint, 2026.
 
 Uses the Interaction Trees library to model programs as coinductive trees of
 events, the governance pipeline as a handler transformer, and the four
@@ -75,6 +76,45 @@ The interpreter specification was tested with property-based testing: 70,000+ ra
 | Decidability boundary | `Rice.v` | Structural properties (capability checks) are decidable; semantic properties (halting) are non-trivial |
 | Halting non-triviality | `Rice.v` | Some programs halt, some don't; halting is not constant-true or constant-false |
 | **Governed Cognitive Completeness** | `GovernedCognitiveCompleteness.v` | **A single architecture simultaneously achieves Turing completeness, oracle integration, decidability self-awareness, goal reachability, cognitive architecture completeness, and subsumption of content governance. All governed.** |
+
+### Governed Metaprogramming
+
+| Theorem | File | What It Says |
+|---------|------|-------------|
+| Form manipulation purity | `GovernedMetaprogramming.v` | Form operations produce no directives (pure data manipulation) |
+| Materialization governed | `GovernedMetaprogramming.v` | Form-to-machine transition requires governance decision |
+| No bypass form to machine | `GovernedMetaprogramming.v` | No sequence of pure operations produces an executing machine |
+| Coterminous preserved | `GovernedMetaprogramming.v` | Adding forms preserves the coterminous boundary (E = G) |
+| Form inspection safety | `GovernedMetaprogramming.v` | Inspecting a form does not grant the capabilities it declares |
+| Splice safety | `GovernedMetaprogramming.v` | Splicing sub-forms is pure; materialization is still required |
+| Reflect-modify-materialize pipeline | `GovernedMetaprogramming.v` | Governance engages at exactly one point: materialization |
+| Form does not execute | `GovernedMetaprogramming.v` | A form value does not produce effects, even if it represents effectful code |
+| **12-way capstone** | `GovernedMetaprogramming.v` | **All governed metaprogramming properties hold simultaneously** |
+
+### Network Governance
+
+| Theorem | File | What It Says |
+|---------|------|-------------|
+| Compositional governance | `NetworkGovernance.v` | Governed machines composed through the pipeline remain governed |
+| Capability narrowing | `NetworkGovernance.v` | Call envelopes can restrict capabilities but never widen them |
+| Local-remote equivalence | `NetworkGovernance.v` | Governance of a remote directive is **definitionally identical** to local |
+| Protocol uniformity | `NetworkGovernance.v` | MCP, REST, WebSocket, A2A all yield identical governance decisions |
+| Provenance link validity | `NetworkGovernance.v` | Linked hash chains across boundaries preserve individual validity |
+| Provenance tamper detection | `NetworkGovernance.v` | Tampering in a linked chain is detected |
+| Budget-bounded execution | `NetworkGovernance.v` | Callee execution bounded by caller's budget; result is governed |
+| **Network coterminous** | `NetworkGovernance.v` | **Network execution preserves the coterminous boundary (E = G)** |
+
+### Temporal Policy Evolution
+
+| Theorem | File | What It Says |
+|---------|------|-------------|
+| Policy change governed | `TemporalPolicyEvolution.v` | Changing governance policy is itself a governed operation |
+| Safety under restriction | `TemporalPolicyEvolution.v` | Stricter policies preserve safety (tightening rules cannot break governance) |
+| No ungoverned window | `TemporalPolicyEvolution.v` | Every directive during a policy transition receives a governance decision |
+| Provenance continuity | `TemporalPolicyEvolution.v` | Hash chain remains valid across policy changes |
+| Rollback safety | `TemporalPolicyEvolution.v` | Reverting a policy change returns to a known-safe state, fully recorded |
+| Monotone composition | `TemporalPolicyEvolution.v` | Intersection of safe policies is safe (more governance is never less safe) |
+| **Policy coterminous** | `TemporalPolicyEvolution.v` | **Policy evolution preserves the coterminous boundary (E = G)** |
 
 ## Setup
 
@@ -145,6 +185,8 @@ theories/
   TraceSemantics.v                -- Execution traces, trace_of relation, trace_of_bind
   LedgerConnection.v              -- Traces to hash chains, tamper evidence, ledger completeness
   CoterminousBoundary.v           -- Expressiveness = governance boundary, algebraic capstone
+  GovernedMetaprogramming.v       -- Form safety, materialization governance, 12-way capstone
+  NetworkGovernance.v             -- Cross-boundary governance, capability narrowing, protocol uniformity
   TemporalPolicyEvolution.v       -- Policy changes governed, safety preservation, rollback
   Extraction.v                    -- Coq-to-OCaml extraction directives
 ```
@@ -223,6 +265,15 @@ Turing completeness is achieved *within* the governed architecture.
 - Mac Lane, "Categories for the Working Mathematician", 1971
 - Hur et al., "The Power of Parameterization in Coinductive Proof", POPL 2013
 
-## License
+## License and Patents
 
-MIT. See [LICENSE](LICENSE).
+The Coq proof sources are licensed under MIT. See [LICENSE](LICENSE).
+
+The governance architecture formalized by these proofs is the subject of
+pending U.S. provisional patent applications by Mashin, Inc. The MIT license
+applies to the proof sources; it does not grant rights under any patents.
+See [PATENTS](PATENTS) for details.
+
+You may freely read, compile, cite, study, and extend these proofs. Building
+a commercial system that implements the governance architecture described by
+these proofs may require a separate patent license.

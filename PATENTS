@@ -1,0 +1,20 @@
+Patent Notice
+
+The MIT license granted in the LICENSE file applies to the Coq proof source
+code in this repository. It permits you to use, copy, modify, and distribute
+the proof sources.
+
+The governance architecture formalized by these proofs is the subject of
+pending U.S. provisional patent applications filed by Mashin, Inc. The MIT
+license on the proof sources does not constitute a grant of rights under
+any patent claims.
+
+Specifically:
+- You may freely read, compile, cite, study, and extend these proofs.
+- You may use these proofs to verify claims made in associated papers.
+- You may build upon these proofs for academic research.
+- Building a commercial system that implements the governance architecture
+  described by these proofs may require a separate patent license from
+  Mashin, Inc.
+
+For patent licensing inquiries: legal@mashin.live
