@@ -1,3 +1,11 @@
+(* Copyright (c) 2026 Alan Lawrence McCann, Mashin, Inc.
+   Licensed under MIT. See LICENSE file.
+
+   The governance architecture formalized in this development is the
+   subject of pending U.S. patent applications by Mashin, Inc. The
+   MIT license applies to these proof sources; it does not grant
+   rights under any patents. *)
+
 (** * Expressive Minimality: Each Primitive Is Strictly Necessary
 
     Proves that the primitive set {code, memory, reason, call}
