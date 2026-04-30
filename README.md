@@ -18,7 +18,7 @@ primitives as specific event patterns.
 
 ## Summary
 
-- **32 modules**, approximately 12,000 lines of Coq, **548 theorems**
+- **36 modules**, approximately 12,000 lines of Coq, **454 theorems**
 - **Zero admitted lemmas** (every theorem fully proved)
 - **Coq 8.19.2** with Interaction Trees 5.2.1, paco 4.2.3, ExtLib 0.13.0
 - Capstone: **Governed Cognitive Completeness** theorem combining six properties in one result

@@ -30,6 +30,4 @@ theories/TraceSemantics.v
 theories/LedgerConnection.v
 theories/CoterminousBoundary.v
 theories/GovernedMetaprogramming.v
-theories/NetworkGovernance.v
-theories/TemporalPolicyEvolution.v
 theories/Extraction.v
