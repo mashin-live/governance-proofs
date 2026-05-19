@@ -1,16 +1,16 @@
-# Mechanized Foundations of Structural Governance
+# Mechanized Foundations of Intent-Driven Computing
 
-[![Build Coq Proofs](https://github.com/mashin-live/governance-proofs/actions/workflows/build.yml/badge.svg)](https://github.com/mashin-live/governance-proofs/actions/workflows/build.yml)
+[![Build Rocq Proofs](https://github.com/mashin-live/governance-proofs/actions/workflows/build.yml/badge.svg)](https://github.com/mashin-live/governance-proofs/actions/workflows/build.yml)
 
-Coq formalization of the core theorems from:
+Rocq formalization of the core theorems from:
 
-- McCann, A.L. "The Two Boundaries: Why Behavioral AI Governance Fails Structurally." arXiv preprint, 2026.
-- McCann, A.L. "Mechanized Foundations of Structural Governance: Machine-Checked Proofs for Governed Intelligence." arXiv preprint, 2026.
-- McCann, A.L. "Effect-Transparent Governance for AI Workflow Architectures." arXiv preprint, 2026.
-- McCann, A.L. "Algebraic Semantics of Governed Execution: Monoidal Categories, Effect Algebras, and Coterminous Boundaries." arXiv preprint, 2026.
-- McCann, A.L. "Certified Purity for Cognitive Workflow Executors." arXiv preprint, 2026.
-- McCann, A.L. "Cryptographic Registry Provenance: Structural Defense Against Dependency Confusion in AI Package Ecosystems." arXiv preprint, 2026.
-- McCann, A.L. "Governed Metaprogramming for Intelligent Systems: Reclassifying Eval as a Governed Effect." arXiv preprint, 2026.
+1. McCann, A.L. "The Two Boundaries: Why Behavioral AI Governance Fails Structurally." [arXiv:2604.27292](https://arxiv.org/abs/2604.27292), 2026.
+2. McCann, A.L. "Mechanized Foundations of Structural Governance: Machine-Checked Proofs for Governed Intelligence." [arXiv:2604.27289](https://arxiv.org/abs/2604.27289), 2026.
+3. McCann, A.L. "Effect-Transparent Governance for AI Workflow Architectures: Semantic Preservation, Expressive Minimality, and Decidability Boundaries." [arXiv:2605.01030](https://arxiv.org/abs/2605.01030), 2026.
+4. McCann, A.L. "Algebraic Semantics of Governed Execution: Monoidal Categories, Effect Algebras, and Coterminous Boundaries." [arXiv:2605.01032](https://arxiv.org/abs/2605.01032), 2026.
+5. McCann, A.L. "Certified Purity for Cognitive Workflow Executors: From Static Analysis to Cryptographic Attestation." [arXiv:2605.01037](https://arxiv.org/abs/2605.01037), 2026.
+6. McCann, A.L. "Cryptographic Registry Provenance: Structural Defense Against Dependency Confusion in AI Package Ecosystems." [arXiv:2605.03309](https://arxiv.org/abs/2605.03309), 2026.
+7. McCann, A.L. "Governed Metaprogramming for Intelligent Systems: Reclassifying Eval as a Governed Effect." [arXiv:2605.05248](https://arxiv.org/abs/2605.05248), 2026.
 
 Uses the Interaction Trees library to model programs as coinductive trees of
 events, the governance pipeline as a handler transformer, and the four
@@ -18,9 +18,9 @@ primitives as specific event patterns.
 
 ## Summary
 
-- **36 modules**, approximately 12,000 lines of Coq, **454 theorems**
+- **41 modules**, approximately 14,000 lines of Rocq, **562 theorems** (454 interaction-tree + 108 lambda^intent)
 - **Zero admitted lemmas** (every theorem fully proved)
-- **Coq 8.19.2** with Interaction Trees 5.2.1, paco 4.2.3, ExtLib 0.13.0
+- **Rocq 8.19.2** (formerly Coq) with Interaction Trees 5.2.1, paco 4.2.3, ExtLib 0.13.0
 - Capstone: **Governed Cognitive Completeness** theorem combining six properties in one result
 
 ## What Is Proved
@@ -115,6 +115,25 @@ The interpreter specification was tested with property-based testing: 70,000+ ra
 | Rollback safety | `TemporalPolicyEvolution.v` | Reverting a policy change returns to a known-safe state, fully recorded |
 | Monotone composition | `TemporalPolicyEvolution.v` | Intersection of safe policies is safe (more governance is never less safe) |
 | **Policy coterminous** | `TemporalPolicyEvolution.v` | **Policy evolution preserves the coterminous boundary (E = G)** |
+
+### Lambda^intent Calculus (5 modules, 108 theorems)
+
+A typed lambda calculus with capability-indexed intent effects, formalizing the operational semantics of intent mediation directly.
+
+| Theorem | File | What It Says |
+|---------|------|-------------|
+| **Progress** | `lambda_intent/Metatheory.v` | Well-typed closed terms are values or can step |
+| **Preservation** | `lambda_intent/Metatheory.v` | Types preserved across reduction; capabilities only shrink |
+| **Governance soundness** | `lambda_intent/Metatheory.v` | Every effect label has a preceding governance-allow label |
+| **Mandatory mediation** | `lambda_intent/Metatheory.v` | Every intent-to-effect path has exactly one governance transition |
+| **Capability confinement** | `lambda_intent/Metatheory.v` | Governance labels respect the typing's capability set |
+| Pure no governance | `lambda_intent/Metatheory.v` | Pure terms (cap_empty) produce no governance labels |
+| Pure preserves ledger | `lambda_intent/Metatheory.v` | Pure terms don't modify the governance ledger |
+| Static confinement | `lambda_intent/Typing.v` | Terms typed with kap contain no ask_k for k outside kap |
+| Monotone narrowing | `lambda_intent/Composition.v` | Capabilities only narrow through composition chains |
+| Governance at depth | `lambda_intent/Composition.v` | Governance soundness holds at arbitrary composition depth |
+
+Key design discovery: capability annotations belong on typing judgments, not inside arrow types. The standard approach (annotated arrows) breaks generalized substitution; the judgment-based approach makes substitution type-preserving and enables the full metatheory.
 
 ## Setup
 
@@ -257,10 +276,20 @@ Turing completeness is achieved *within* the governed architecture.
 
 ## References
 
-- Xia et al., "Interaction Trees: Representing Recursive and Impure Programs
-  in Coq", POPL 2020
-- Zakowski et al., "An Interaction Tree Approach to Verified Compilation",
-  Vellvm project (ICFP 2021)
+### Our Papers
+
+1. McCann, A.L. "The Two Boundaries: Why Behavioral AI Governance Fails Structurally." [arXiv:2604.27292](https://arxiv.org/abs/2604.27292), 2026.
+2. McCann, A.L. "Mechanized Foundations of Structural Governance." [arXiv:2604.27289](https://arxiv.org/abs/2604.27289), 2026.
+3. McCann, A.L. "Effect-Transparent Governance for AI Workflow Architectures." [arXiv:2605.01030](https://arxiv.org/abs/2605.01030), 2026.
+4. McCann, A.L. "Algebraic Semantics of Governed Execution." [arXiv:2605.01032](https://arxiv.org/abs/2605.01032), 2026.
+5. McCann, A.L. "Certified Purity for Cognitive Workflow Executors." [arXiv:2605.01037](https://arxiv.org/abs/2605.01037), 2026.
+6. McCann, A.L. "Cryptographic Registry Provenance." [arXiv:2605.03309](https://arxiv.org/abs/2605.03309), 2026.
+7. McCann, A.L. "Governed Metaprogramming for Intelligent Systems." [arXiv:2605.05248](https://arxiv.org/abs/2605.05248), 2026.
+
+### Foundational Work
+
+- Xia et al., "Interaction Trees: Representing Recursive and Impure Programs in Coq", POPL 2020
+- Zakowski et al., "An Interaction Tree Approach to Verified Compilation", Vellvm project (ICFP 2021)
 - Minsky, "Computation: Finite and Infinite Machines", 1967 (register machines)
 - Mac Lane, "Categories for the Working Mathematician", 1971
 - Hur et al., "The Power of Parameterization in Coinductive Proof", POPL 2013

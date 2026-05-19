@@ -27,3 +27,4 @@ extracted/*.o
 
 # macOS
 .DS_Store
+.lia.cache

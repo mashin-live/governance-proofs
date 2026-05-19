@@ -31,3 +31,10 @@ theories/LedgerConnection.v
 theories/CoterminousBoundary.v
 theories/GovernedMetaprogramming.v
 theories/Extraction.v
+
+# Lambda^intent calculus (OSI paper)
+theories/lambda_intent/Syntax.v
+theories/lambda_intent/Typing.v
+theories/lambda_intent/Semantics.v
+theories/lambda_intent/Metatheory.v
+theories/lambda_intent/Composition.v
