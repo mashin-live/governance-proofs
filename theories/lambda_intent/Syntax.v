@@ -1,8 +1,8 @@
-(* Copyright (c) 2026 Alan Lawrence McCann, Mashin, Inc.
+(* Copyright (c) 2026 Alan Lawrence McCann, mashin, Inc.
    Licensed under MIT. See LICENSE file.
 
    The governance architecture formalized in this development is the
-   subject of pending U.S. patent applications by Mashin, Inc. The
+   subject of pending U.S. patent applications by mashin, Inc. The
    MIT license applies to these proof sources; it does not grant
    rights under any patents. *)
 

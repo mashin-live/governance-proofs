@@ -1,4 +1,4 @@
-(* Copyright (c) 2026 Alan Lawrence McCann, Mashin, Inc.
+(* Copyright (c) 2026 Alan Lawrence McCann, mashin, Inc.
    Licensed under MIT. See LICENSE file. *)
 
 (** * Lambda^intent Type-and-Effect System
