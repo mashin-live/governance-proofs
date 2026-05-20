@@ -294,15 +294,8 @@ Turing completeness is achieved *within* the governed architecture.
 - Mac Lane, "Categories for the Working Mathematician", 1971
 - Hur et al., "The Power of Parameterization in Coinductive Proof", POPL 2013
 
-## License and Patents
+## License
 
 The Rocq proof sources are licensed under MIT. See [LICENSE](LICENSE).
 
-The governance architecture formalized by these proofs is the subject of
-pending U.S. provisional patent applications by mashin, Inc. The MIT license
-applies to the proof sources; it does not grant rights under any patents.
-See [PATENTS](PATENTS) for details.
-
-You may freely read, compile, cite, study, and extend these proofs. Building
-a commercial system that implements the governance architecture described by
-these proofs may require a separate patent license.
+You may freely read, compile, cite, study, and extend these proofs.
