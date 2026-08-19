@@ -298,4 +298,8 @@ Turing completeness is achieved *within* the governed architecture.
 
 The Rocq proof sources are licensed under MIT. See [LICENSE](LICENSE).
 
+The MIT license applies to the proof sources only and does not constitute a grant of
+rights under any patent claims. The governance architecture formalized by these proofs
+is the subject of pending patent applications. See [PATENTS](PATENTS).
+
 You may freely read, compile, cite, study, and extend these proofs.
